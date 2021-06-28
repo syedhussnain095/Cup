@@ -1,38 +1,873 @@
-.App {
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: #ffffff;
+}
+/* Mail And Icons Css Start From Here */
+.icons i {
+  margin: 12px;
+  font-size: 22px !important;
+  color: #000 !important;
+}
+.for_main_text {
+  margin: 9px;
+  font-size: 14px;
+  color: #444444;
+  font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
+    "Courier New", monospace;
+}
+
+.muiSvgIcon {
+  font-size: 5px !important;
+}
+@media only screen and (max-width: 991px) {
+  .for_main_text {
+    display: none;
+  }
+  .icons {
+    margin-right: auto;
+    margin-top: 2px;
+  }
+}
+
+/* Navbar Css Start From Here */
+.nav-bg {
+  background: #f08632 !important;
+}
+.navbar {
+  background: #f08632 !important;
+}
+.navbar-brand h4 {
+  color: #000;
+  font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
+    "Courier New", monospace;
+  font-weight: lighter;
+  font-style: italic;
+  font-size: 29px;
+  border: 1px solid #000;
+  padding: 3px;
+}
+
+.nav-item {
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1;
+  padding: 15px;
+}
+.nav-item:hover{
+  background-color: #000;
+}
+.for_links_bg{
+  background-color: #000;
+}
+.nav-link{
+  font-size: 13px;
+}
+@media only screen and (max-width: 991px) {
+  .nav-item {
+    font-size: 0.875em !important;
+    font-weight: normal !important;
+  }
+  .nav-item:hover{
+    background: none;
+  }
+  .for_links_bg{
+    background: none;
+  }
+  .navbar-brand h4{
+    font-size: 22px !important;
+    margin-top: 14px;
+  }
+}
+  @media only screen and (max-width: 768px) {
+
+    .for_links_bg{
+      background: none;
+    }
+    .nav-item:hover{
+      background: none;
+    }
+  }
+
+
+/* Contact Css Start From Here */
+#contact_map {
+  background-image: url(./images/mapimage.jpg);
+  width: 100%;
+  cursor: pointer;
+  height: 50vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.map_text_main {
+  padding-top: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.map_text {
+  padding: 12px 20px 20px;
+  background-color: #ffffff !important;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.map_text p {
+  font-size: 12px;
+  color: #444444;
+  margin-bottom: 10px;
+  font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
+    "Courier New", monospace;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.map_text h4 {
+  font-size: 16px;
+  font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono";
+  color: #111111;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+.contact_address_text {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  flex-direction: column;
+  padding-bottom: 40px;
+  border-bottom: 1px solid #e8eff4;
+  margin-bottom: 70px;
+}
+.contact_address_text h5 {
+  color: #111111;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 25px;
+  font-size: 16px;
+  font-family: "Montserrat", sans-serif;
+}
+.MuiSvgIcon-root {
+  font-size: 1.0rem !important;
+  color: #000 !important;
+}
+.contact_address_text span {
+  font-family: "Montserrat", sans-serif;
+  font-size: 13px;
+  color: #444444;
+  margin-left: 10px;
+  line-height: 26px;
+  margin-bottom: 0;
+}
+.form-group input {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 300px !important;
+  background: #fafafa;
+  border: 1px solid #e1e1e1;
+  height: 50px;
+  font-size: 14px;
+  padding-left: 20px;
+  font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
+    "Courier New", monospace;
+  margin-bottom: 30px;
+}
+.form-group textarea {
+  width: 100%;
+  height: 140px;
+  border: 1px solid #e1e1e1;
+  background: #fafafa;
+  font-size: 14px;
+  padding-left: 20px;
+  padding-top: 12px;
+  margin-bottom: 24px;
+  resize: none;
+  font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
+    "Courier New", monospace;
+}
+
+.contact_with_us_text h4 {
+  margin-top: -50px;
+  color: #111111;
+  font-weight: 700;
+  font-style: italic;
+  font-family: "Playfair Display", serif;
+  margin-bottom: 20px;
+  font-size: 30px;
+}
+.contact_with_us_text p {
+  font-size: 16px;
+  font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
+    "Courier New", monospace;
+  color: #444444;
+  line-height: 36px;
+  margin-bottom: -4px;
+}
+.contact_with_us_text img {
+  margin-top: 20px;
+  max-width: 100%;
+}
+@media only screen and (max-width: 991px) {
+  .form-group input {
+    width: 240px !important;
+  }
+  .contact_address_text {
+    display: flex;
+    justify-content: left;
+    align-items: left;
+    flex-direction: column;
+  }
+}
+@media only screen and (max-width: 769px) {
+  .contact_address_text span{
+    font-size: 8px;
+  }
+}
+/* WishList And Cart and other Header after text Css Start From Here */
+.wishlist_data_text h3 {
+  font-size: 50px;
+  color: #000;
+  font-weight: 700;
+  font-style: italic;
+  font-family: "Playfair Display", serif;
+}
+.home_list_text p {
+  font-size: 16px;
+  color: #111;
+  margin-right: 26px;
+}
+.style_list {
+  color: #888 !important;
+}
+.style_home::after {
+  position: absolute;
+  padding-left: 10px;
+  content: "|";
+  color: #888;
+}
+.cart_fill_text h3 {
+  font-size: 50px;
+  color: #000;
+  font-weight: 700;
+  font-style: italic;
+  font-family: "Playfair Display", serif;
+}
+.shop_now button {
+  font-size: 14px;
+  color: #ffffff;
+  background: #111111;
+  font-weight: 600;
+  border: none;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  padding: 14px 30px;
+  font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
+    "Courier New", monospace;
+}
+.shop_now button:hover {
+  background-color: #ffffff;
+  color: #000;
+  border: 1px solid #000;
+}
+@media only screen and (max-width: 991px) {
+  .wishlist_data_text h3{
+    font-size: 32px !important;
+    padding-top: 5px;
+  }
+  .home_list_text p{
+    font-size: 12px !important;
+  }
+  .cart_fill_text h3{
+    font-size: 32px !important;
+  }
+}
+/* Shop Css Start From Here */
+.for_search input {
+  width: 400px;
+}
+.input-group-text {
+  background-color: #ffffff !important;
+}
+.input-group-text select {
+  border: none !important;
+}
+.fa-search {
+  cursor: pointer;
+}
+.input-group-text {
+  border: 1px solid #e1e1e1;
+}
+.input-group-text i {
+  color: #000;
+  font-size: 16px;
+}
+.search_bar {
+  height: 40px !important;
+  width: 250px !important;
+  background: #fff;
+  border: 1px solid #e1e1e1;
+  font-size: 14px;
+  padding-left: 20px;
+  font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
+    "Courier New", monospace;
+  margin-bottom: 30px;
+}
+.sorting select {
+  width: 205px;
+  /* height: 46px; */
+  background-color: #f5f5f5;
+  border: none;
+  padding-left: 30px;
+  padding: 12px;
+  border-radius: 0;
+  box-sizing: border-box;
+  font-size: 16px;
+  cursor: pointer;
+  margin-right: 18px;
+}
+.sorting {
+  float: right;
+}
+.sorting option{
+  cursor: pointer;
+  font-weight: 400;
+  background-color: #fff;
+  padding-left: 18px;
+  padding-right: 29px;
+}
+.shop_main_text{
+  text-align: center;
+}
+.main_shop_img img{
+  cursor: pointer;
+  border-radius: none;
+}
+
+.shop_main_text h5{
+  color: #111;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 17px;
+  margin-top: 22px;
+  font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
+    "Courier New", monospace;
+}
+.shop_main_text p{
+  color: #111;
+  line-height: 1.5;
+  font-size: 14px;
+    font-weight: 600;
+    font-size: 16px;
+}
+.shop_main_text button{
+  font-size: 14px;
+  color: #ffffff;
+  background: #111111;
+  font-weight: 600;
+  border: none;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  padding: 14px 30px;
+  font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
+    "Courier New", monospace;
+}
+
+button, input, optgroup, select, textarea {
+  outline: none;
+  border: none;
+}
+@media only screen and (max-width: 280px) {
+  .search_bar {
+    width: 200px !important;
+  }
+}
+@media only screen and (max-width: 280px){
+  .sorting{
+    float: right !important;
+    padding-top: 20px;
+  }
+}
+@media only screen and (max-width: 357px){
+  .search_bar{
+    width: 180px !important;
+  padding-right: 15px;
+  }
+}
+@media only screen and (max-width: 287px){
+  .search_bar{
+    width: 100px !important;
+  padding-right: 15px;
+  }
+}
+@media only screen and (max-width: 991px){
+    .sorting select{
+      float: right !important;
+      padding-top: 20px;
+    }
+    .sorting{
+      float: left !important;
+      padding-top: 17px;
+      padding: 45px;
+    }
+}
+/* About Css Start from Here */
+.for_about_head_img_fix{
+  max-width: 1150px !important;
+}
+#aboutHead{
+  background-image: url(./images/aboutheader.jpg);
+  width: 100%;
+  height:60vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.about_play_center{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.about_play_center i {
+  background-color: #f08632;
+  border-radius: 50%;
+  cursor: pointer;
+  padding: 20px;
+}
+.about_cake_shop h5{
+  color: #f08632;
+  font-size: 21px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  display: block;
+  margin-bottom: 10px;
+}
+.about_cake_shop h4{
+  font-size: 46px;
+    color: #111111;
+    line-height: 60px;
+    font-weight: 700;
+    font-style: italic;
+    margin-bottom: 10px;
+    font-family: "Playfair Display", serif;
+}
+.about_cake_shop p{
+  font-size: 16px;
+    font-family: "Montserrat", sans-serif;
+    color: #111111;
+    font-weight: 400;
+    line-height: 28px;
+    /* margin-top: 15px; */
+    margin: 5 0 15px 0;
+}
+.progress{
+  border-radius: 0%;
+  height: 6px !important;
+}
+.progress-bar{
+  font-size: 12px;
+  font-weight: bold;
+}
+.cake_design_text p{
+  margin-left: auto;
+  font-size: 13px;
+  font-family: "Montserrat", sans-serif;
+}
+.cake_design_text h4{
+  font-size: 16px;
+    font-family: "Montserrat", sans-serif;
+    color: #111111;
+    font-weight: 400;
+    line-height: 28px;
+    margin: 0 0 15px 15px;
+    font-weight: bold;
+}
+.for_clients_upper_text{
+  text-align: center;
+}
+.for_clients_upper_text h6{
+  color: #f08632;
+    font-size: 20px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    margin-bottom: 10px;
+}
+.for_clients_upper_text h4{
+  font-size: 46px;
+    color: #111111;
+    line-height: 60px;
+    font-weight: 700;
+    font-style: italic;
+    font-family: "Playfair Display", serif;
+}
+.for_clients_img{
+  max-width: 100%;
+  overflow: hidden;
+  cursor: pointer;
+}
+.for_clients_img img{
+  overflow: hidden;
+  cursor: pointer;
+  width: 100%;
+}
+.all_clients:hover{
+  border: 1px solid #f08632;
+}
+.card-body{
+  text-align: center;
+  color: #fff;
+}
+.card{
+  border: 1px solid #fafafa;
+}
+.card-body h5{
+  color: #111111;
+    font-weight: 800;
+    font-size: 18px;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+}
+.card-body p{
+  color : #444444;
+  font-size: 14px;
+}
+.for_text{
+  font-size: 16px !important;
+  color: #111111 !important;
+  font-style: italic;
+}
+.team_images {
+  text-align: center;
+  position: relative;
+  width: 100%;
+}
+.team_images img{
+  opacity: 1;
+  width: 100%;
+  transition: .5s ease;
+  backface-visibility: hidden;
+}
+.text_appers{
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 0%;
+  left: 50%;
+  cursor: pointer;
+  transform: translate(-50%, -0%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+.text_appers h6{
+  font-size: 14px;
+  font-weight: bold;
+  font-family: "Montserrat", sans-serif;
+}
+.text_appers p{
+  font-size: 12px;
+  font-family: "Montserrat", sans-serif;
+}
+.text_appers button{
+  font-size: small;
+  background-color: black;
+  padding: 3px 18px 3px 18px;
+  font-family: "Montserrat", sans-serif;
+  color: #fff;
+}
+.team_images:hover .img {
+  overflow: hidden;
+  opacity: 0.1;
+}
+
+.team_images:hover .text_appers {
+  background-color: #fff;
+  padding: 15px 90px 15px 90px;
+  overflow: hidden;
+  opacity: 0.9;
+}
+
+.text {
+  background-color: #04AA6D;
   color: white;
+  font-size: 16px;
+  padding: 16px 32px;
+}
+/* Home Css Start From Here */
+#homeHead{
+  background-image: url(./images/homehead.jpg);
+  width: 100%;
+  height: 88vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.header_text_main {
+  padding-top: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.heads_text {
+  border: 1px solid #e1e1e1;
+  padding: 65px 70px 70px;
+  background-color: #ffffff !important;
+}
+.heads_text h3{
+  font-size: 46px;
+    color: #111111;
+    line-height: 60px;
+    font-weight: 700;
+    font-style: italic;
+    margin-bottom: 18px;
+}
+.heads_text button{
+  font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    padding: 14px 30px;
+    color: #ffffff;
+    background: #f08632;
+    letter-spacing: 2px;
 }
 
-.App-link {
-  color: #61dafb;
+@media only screen and (max-width: 991px){
+.for_prog_br{
+  margin-top: 20px;
+}
+.heads_text{
+  padding: 25px 50px 50px;
+}
+.header_text_main {
+  padding-top: 70px;
+}
+.heads_text h3{
+  font-size: 17px;
+  line-height: 30px;
+}
+.team_images:hover .text_appers {
+  padding: 15px 50px 15px 50px;
+}
+}
+.hello{
+  transition: .5s ease;
+  opacity: 1;
+  position: absolute;
+  color: #111;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* -ms-transform: translate(-50%, -50%); */
+  text-align: center;
+}
+.container:hover .image {
+  opacity: 0.3;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.container:hover .middle {
+  opacity: 1;
+}
+
+.text {
+  background-color: #04AA6D;
+  color: white;
+  font-size: 16px;
+  padding: 16px 32px;
+}
+
+
+/* Footer Css Start From Here */
+#footer_bg_img{
+  background-image: url(./images/footcup.jpg);
+  width: 100%;
+  height: 52vh;
+  background-size: cover;
+  margin-top: 50px;
+  background-repeat: no-repeat;
+}
+.foot_one h6{
+  color: #ffffff;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: 22px;
+    font-size: 16px;
+    font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
+    "Courier New", monospace;
+}
+.foot_one p{
+  list-style: none;
+  font-size: 14px;
+  color: #a4a4a4;
+  line-height: 36px;
+  font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
+  "Courier New", monospace;
+}
+.foot_one::after , .foot_two::after{
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 1px;
+  height: 190px;
+  background: rgba(255, 255, 255, 0.1);
+  content: "";
+}
+.foot_two p{
+  list-style: none;
+  font-size: 14px;
+  color: #a4a4a4;
+  line-height: 36px;
+  text-align: center;
+  font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
+  "Courier New", monospace;
+}
+.foot_two i{
+  text-align: center;
+  color: #fafafa;
+}
+.for_foot_icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.fa-facebook-f{
+  display: inline-block;
+  color: #ffffff;
+  background: rgba(225, 225, 225, 0.1);
+  height: 45px;
+  width: 45px;
+  border-radius: 50%;
+  line-height: 45px;
+  text-align: center;
+  margin-right: 6px;
+}
+.fa-facebook-f:hover{
+  background-color: #fff;
+  color: #1877f2;
+}
+.fa-youtube{
+  display: inline-block;
+  color: #ffffff;
+  background: rgba(225, 225, 225, 0.1);
+  height: 45px;
+  width: 45px;
+  border-radius: 50%;
+  line-height: 45px;
+  text-align: center;
+  margin-right: 6px;
+}
+.fa-youtube:hover{
+  background-color: #fff;
+  color: #FF0000;
+}
+.fa-twitter{
+  display: inline-block;
+  color: #ffffff;
+  background: rgba(225, 225, 225, 0.1);
+  height: 45px;
+  width: 45px;
+  border-radius: 50%;
+  line-height: 45px;
+  text-align: center;
+  margin-right: 6px;
+}
+.fa-twitter:hover{
+  background-color: #fff;
+  color: #1DA1F2;
+}
+.fa-instagram{
+  display: inline-block;
+  color: #ffffff;
+  background: rgba(225, 225, 225, 0.1);
+  height: 45px;
+  width: 45px;
+  border-radius: 50%;
+  line-height: 45px;
+  text-align: center;
+  margin-right: 6px;
+}
+.fa-instagram:hover{
+  background-color: #fff;
+  color: #1DA1F2;
+}
+.for_copy{
+  color: #fafafa;
+  font-size: 14px;
+  font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
+  "Courier New", monospace;
+  height: 40px;
+  background-color: black;
+}
+.for_copy p{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
+  "Courier New", monospace;
+  padding: 4px;
+}
+@media only screen and (max-width: 769px){
+ #footer_bg_img{
+   height: 100vh;
+ }
+ .foot_one::after , .foot_two::after{
+   display: none;
+ }
+}
+/* Search Bar Css */
+.search-box{
+  color: #111;
+  border-radius: 50px;
+}
+.search-input{
+  border-radius: 10px;
+}
+.search-input {
+  color: black;
+  font-size: 14px;
+  transition: 0.7s;
+  margin-top: 12px;
+  line-height: 30px;
+  font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
+  "Courier New", monospace;
+  width: 0;
+}
+.search-box:hover > .search-input {
+  width: 250px;
+  border: 1px solid #444444;
+  padding: 0 7px;
+}
+@media only screen and (max-width: 991px){
+  .search-box:hover > .search-input {
+    width: 130px;
   }
-  to {
-    transform: rotate(360deg);
-  }
+}
+/* Login Css  */
+.Heading__Book{
+  font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
+  "Courier New", monospace;
+  text-align: center;
+}
+.main_from_div input{
+  outline: none;
+  height: 43px;
+  font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
+  "Courier New", monospace;
+  font-size: 14px;
+}
+.main_from_div label{
+  font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
+  "Courier New", monospace;
+  font-size: 14px;
+}
+.for_login_btn{
+  text-align: center;
+  font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
+  "Courier New", monospace;
+}
+
+@media only screen and (max-width: 769px){
+.pt-3, .py-3 {
+  padding-top: 0% !important;
+}
+.pt-3, .py-3 {
+  padding-top: 0% !important;
+}
 }
